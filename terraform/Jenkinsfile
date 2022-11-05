@@ -27,13 +27,9 @@ pipeline {
         }
         stage ("terrafrom plan") {
             steps {
-                sh 'cd terraform && terraform plan'
+                sh 'cd terraform && terraform destroy --auto-approve'
             }
         }
-        stage ("terraform apply") {
-            steps {
-                sh 'cd terraform && terraform apply --auto-approve'
-            }
-        }
+      
     }
 }
