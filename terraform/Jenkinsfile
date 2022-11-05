@@ -5,11 +5,7 @@ pipeline {
         terraform 'jenkins-terraform'
     }
     stages {
-        stage ("checkout from GIT") {
-            steps {
-                git branch: 'main',  url: 'https://github.com/vinayboggarapu1983/microservices-demo/tree/main/terraform'
-            }
-        }
+      
         stage ("terraform init") {
             steps {
                 sh 'terraform init'
