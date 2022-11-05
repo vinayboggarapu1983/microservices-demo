@@ -6,7 +6,7 @@ pipeline {
     }
     
     tools {
-        terraform 'jenkins-terraform'
+        terraform 'jenkins_terraform'
     }
     stages {
       
