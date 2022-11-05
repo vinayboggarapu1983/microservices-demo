@@ -25,5 +25,5 @@ terraform {
 provider "google" {
   project = var.gcp_project_id
   region  = var.region
-  credentials = file("vinaydevops-ed250eb25b22.json")
+  credentials = file("vinaydevops.json")
 }
