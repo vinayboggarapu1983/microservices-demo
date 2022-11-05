@@ -25,7 +25,11 @@ pipeline {
                 sh 'cd terraform && terraform validate'
             }
         }
- 
+        stage ("terrafrom plan") {
+            steps {
+                sh 'cd terraform && terraform plan'
+            }
+        }
       
     }
 }
