@@ -32,7 +32,7 @@ pipeline {
         }
         stage ("terraform apply") {
             steps {
-                sh 'cd terraform && terraform apply'
+                sh 'cd terraform && terraform apply --auto-approve'
             }
         }
     }
