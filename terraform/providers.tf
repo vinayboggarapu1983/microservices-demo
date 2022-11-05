@@ -17,7 +17,6 @@ terraform {
     google = {
       source  = "hashicorp/google"
       version = "4.42.1"
-      credentials = file("sc_jenkins_terraform.json")
   
     }
   }
