@@ -1,8 +1,8 @@
 pipeline {
     agent any
      environment {
-        GOOGLE_PROJECT_ID = "vinaydevops" 
-        credentials = file("sc_jenkins_terraform.json")
+        PROJECT_ID = "vinaydevops" 
+        CREDENTIALS_ID = 'sc_jenkins_terraform'
     }
     
     tools {
