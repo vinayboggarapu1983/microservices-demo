@@ -25,15 +25,11 @@ pipeline {
                 sh 'cd terraform && terraform validate'
             }
         }
-        stage ("terrafrom plan") {
-            steps {
-                sh 'cd terraform && terraform plan'
+        stage ("terrafrom desroy") {
+            steps 
+                sh 'cd terraform && terraform destroy --auto-approve'
             }
         }
-        stage ("terraform apply") {
-            steps {
-                sh 'cd terraform && terraform apply --auto-approve'
-            }
-        }
+        
     }
 }
