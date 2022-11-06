@@ -16,7 +16,7 @@
 
 # Create GKE cluster
 module "gke_auth" {
-  source = "terraform-google-modules/kubernetes-engine/google//modules/auth"
+  source = "terraform-google-modules/kubernetes-engine/google"
   depends_on   = [module.gke]
   project_id   = var.project_id
   location     = module.gke.location
@@ -28,7 +28,7 @@ resource "local_file" "kubeconfig" {
 }
 module "gcp-network" {
   source       = "terraform-google-modules/network/google"
-  version      = "~> 2.5"
+  version      = "~> 3.0"
   project_id   = var.project_id
   network_name = "${var.network}-${var.env_name}"
   subnets = [
@@ -53,7 +53,7 @@ module "gcp-network" {
 }
 
 module "gke" {
-  source                 = "terraform-google-modules/kubernetes-engine/google//modules/private-cluster"
+  source                 = "terraform-google-modules/kubernetes-engine/google//modules/public-cluster"
   project_id             = var.project_id
   name                   = "${var.cluster_name}-${var.env_name}"
   regional               = true
