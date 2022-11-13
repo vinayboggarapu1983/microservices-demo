@@ -1,7 +1,7 @@
 pipeline {
     agent any
      environment {
-        PROJECT_ID = "vinaydevops" 
+        PROJECT_ID = "santu0908-365206" 
         CREDENTIALS_ID = 'sc_jenkins_terraform'
     }
     
