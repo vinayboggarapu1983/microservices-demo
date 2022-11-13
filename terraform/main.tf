@@ -98,7 +98,7 @@ resource "null_resource" "wait_conditions" {
   # Storing state file in backend
  terraform {
     backend "gcs" {
-        bucket = "cicd-jenkins-terraform"
-        credentials = "vinaydevops.json"
+        bucket = "santu0908-365206"
+        credentials = "santudevops.json"
     }
  }
