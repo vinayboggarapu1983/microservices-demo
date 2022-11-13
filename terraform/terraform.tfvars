@@ -12,6 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-gcp_project_id = "vinaydevops"
+gcp_project_id = "santu0908-365206"
 
 memorystore = false
